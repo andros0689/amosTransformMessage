@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d [%-15.15t] %-5p %-10.10c{1} - %-10.10X{camel.exchangeId} - %-20.20X{camel.routeId} - %m%n</pattern>
+<!--             <pattern>%d [%-10.21t] %-5p %-10.45c{1} - %-10.10X{camel.exchangeId} %n</pattern> -->
+        </encoder>
+    </appender>
+    
+    <appender name="azureInsightsAppender"
+		class="com.microsoft.applicationinsights.logback.ApplicationInsightsAppender">
+	</appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+    <logger name="rh-av-tasas-cambio" level="${loggingLevel}" additivity="false">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="azureInsightsAppender"/>
+    </logger>
+
+</configuration>

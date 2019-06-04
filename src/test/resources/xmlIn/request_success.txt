@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<importarTasa versionamiento="0.2">
+  <listaTasas>
+    <codigoOrigen>COP</codigoOrigen>
+    <codigoDestino>CND</codigoDestino>
+    <descripcionDeTasa>Peso Colombia</descripcionDeTasa>
+    <tasa>70,002,906.9</tasa>
+    <tasaBase>1</tasaBase>
+    <tasaDeCierre>236,589,215.3</tasaDeCierre>
+    <fechaDesde>2019-03-08</fechaDesde>
+  </listaTasas>
+</importarTasa>

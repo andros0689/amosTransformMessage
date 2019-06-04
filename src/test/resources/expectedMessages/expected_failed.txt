@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<objectResponse>
+    <state>Fail</state>
+    <error>
+        <detail>currency[0].currencyCode :: Campo requerido, se encuentra vacio o no existe el elemento</detail>
+    </error>
+</objectResponse>

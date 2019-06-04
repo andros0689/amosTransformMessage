@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings
+	xmlns="http://dozermapper.github.io/schema/bean-mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozermapper.github.io/schema/bean-mapping http://dozermapper.github.io/schema/bean-mapping.xsd">
+	<mapping>
+		<class-a>com.avianca.esb.tasascambio.sapmodel.ImportarTasa</class-a>
+		<class-b>com.avianca.esb.tasasdto.model.ImportCurrency</class-b>
+		<field>
+			<a>versionamiento</a>
+			<b>version</b>
+		</field>
+		<field>
+			<a>listaTasas</a>
+  			<b>currency</b>
+		</field>
+	</mapping>
+	<mapping>
+		<class-a>com.avianca.esb.tasascambio.sapmodel.TipoTasa</class-a>
+		<class-b>com.avianca.esb.tasasdto.model.CurrencyType</class-b>
+		<field>
+			<a>codigoOrigen</a>
+			<b>currencyCode</b>
+		</field>
+		<field>
+			<a>codigoDestino</a>
+			<b>currencyCodeDestiny</b>
+		</field>
+		<field>
+			<a>descripcionDeTasa</a>
+			<b>description</b>
+		</field>
+		<field>
+			<a>tasa</a>
+			<b>exchangeRate</b>
+		</field>
+		<field>
+			<a>tasaBase</a>
+			<b>exchangeBase</b>
+		</field>
+		<field>
+			<a>tasaDeCierre</a>
+			<b>closureRate</b>
+		</field>
+		<field>
+			<a>fechaDesde</a>
+			<b>validFrom</b>
+		</field>
+	</mapping>
+</mappings>

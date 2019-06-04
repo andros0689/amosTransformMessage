@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<importCurrency version="0.2">
+    <currency>
+        <currencyCode>COP</currencyCode>
+        <currencyCodeDestiny>CND</currencyCodeDestiny>
+        <description>Peso Colombia</description>
+        <exchangeRate>70,002,906.9</exchangeRate>
+        <exchangeBase>1</exchangeBase>
+        <closureRate>236,589,215.3</closureRate>
+        <validFrom>2019-03-08</validFrom>
+    </currency>
+</importCurrency>
