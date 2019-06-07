@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.avianca.esb</groupId>
-	<artifactId>amos_shipments_ultimus</artifactId>
+	<artifactId>amos_shipments_ultimus_test</artifactId>
 	<version>1.0.0</version>
 
 	<name>Avianca :: Integrations :: Spring-Boot :: Camel REST / AMQ</name>
@@ -29,6 +29,10 @@
 
 	<repositories>
 		<repository>
+			<id>maven-base-repository</id>
+			<url>https://mvnrepository.com/artifact</url>
+		</repository>
+		<repository>
 			<id>red-hat-ga-repository</id>
 			<url>https://maven.repository.redhat.com/ga</url>
 		</repository>
@@ -42,6 +46,10 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
+		<pluginRepository>
+			<id>maven-base-repository</id>
+			<url>https://mvnrepository.com/artifact</url>
+		</pluginRepository>
 		<pluginRepository>
 			<id>red-hat-ga-repository</id>
 			<url>https://maven.repository.redhat.com/ga</url>
@@ -144,18 +152,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>		
+		</dependency>
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc7</artifactId>
 			<version>12.1.0.2</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>sqljdbc4</artifactId>
 			<version>4.0</version>
-			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
