@@ -29,8 +29,8 @@
 
 	<repositories>
 		<repository>
-			<id>maven-base-repository</id>
-			<url>https://mvnrepository.com/artifact</url>
+			<id>artifactory-avianca</id>
+			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
 		</repository>
 		<repository>
 			<id>red-hat-ga-repository</id>
@@ -47,8 +47,8 @@
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
-			<id>maven-base-repository</id>
-			<url>https://mvnrepository.com/artifact</url>
+			<id>artifactory-avianca</id>
+			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>red-hat-ga-repository</id>
