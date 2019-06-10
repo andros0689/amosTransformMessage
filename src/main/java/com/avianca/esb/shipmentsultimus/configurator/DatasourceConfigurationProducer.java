@@ -30,23 +30,23 @@ import com.avianca.esb.shipmentsultimus.properties.DatasourceProducer;
 @Configuration
 public class DatasourceConfigurationProducer {
 
-    @Autowired
-    private DatasourceProducer consumerBase;
-    
-    @Bean("dataSource")
-    @Primary
-    public DriverManagerDataSource getConfig() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(consumerBase.getDriver());
-        dataSource.setUrl(consumerBase.getUrl());        
-        dataSource.setUsername(consumerBase.getUser());
-        dataSource.setPassword(consumerBase.getPasswd());
-        return dataSource;
-    }
-    
-    @Bean("jdbcTxManager")
-    public PlatformTransactionManager jdbcTxManager() {
-    	DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(getConfig());
-    	return dataSourceTransactionManager;
-    }
+//    @Autowired
+//    private DatasourceProducer consumerBase;
+//    
+//    @Bean("dataSource")
+//    @Primary
+//    public DriverManagerDataSource getConfig() {
+//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//        dataSource.setDriverClassName(consumerBase.getDriver());
+//        dataSource.setUrl(consumerBase.getUrl());        
+//        dataSource.setUsername(consumerBase.getUser());
+//        dataSource.setPassword(consumerBase.getPasswd());
+//        return dataSource;
+//    }
+//    
+//    @Bean("jdbcTxManager")
+//    public PlatformTransactionManager jdbcTxManager() {
+//    	DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager(getConfig());
+//    	return dataSourceTransactionManager;
+//    }
 }

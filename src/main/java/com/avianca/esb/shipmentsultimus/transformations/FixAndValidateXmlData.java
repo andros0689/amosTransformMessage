@@ -63,9 +63,9 @@ public class FixAndValidateXmlData {
 	
 	@Value("${conteo}")
 	private String query5;
-	
-	@BeanInject
-	private DatasourceConfigurationProducer datasourcesoracle;
+//	
+//	@BeanInject
+//	private DatasourceConfigurationProducer datasourcesoracle;
 	
 	@BeanInject
 	private DatasourceSqlConfigurationProducer datasourcessql;
@@ -255,10 +255,10 @@ public class FixAndValidateXmlData {
 		logger.info("Se halla(n) "+body.getShipment().getShipmentItems().size()+" elemento(s) ShipmentItems.");
 		if (body.getShipment().getShipmentItems().size() > 0) {
 			Connection connectionsql = datasourcessql.getConfigSql().getConnection();
-			Connection connection = datasourcesoracle.getConfig().getConnection();
-			PreparedStatement preparedQuery2 = connection.prepareStatement(query2);
-			PreparedStatement preparedQuery3 = connection.prepareStatement(query3);
-			PreparedStatement preparedQuery4 = connection.prepareStatement(query4);
+//			Connection connection = datasourcesoracle.getConfig().getConnection();
+//			PreparedStatement preparedQuery2 = connection.prepareStatement(query2);
+//			PreparedStatement preparedQuery3 = connection.prepareStatement(query3);
+//			PreparedStatement preparedQuery4 = connection.prepareStatement(query4);
 			PreparedStatement preparedQuery5 = connectionsql.prepareStatement(query5);
 			Iterator<ShipmentItems> shipmentItemsIterator = body.getShipment().getShipmentItems().iterator();
 			while (shipmentItemsIterator.hasNext()) {
@@ -272,26 +272,26 @@ public class FixAndValidateXmlData {
 							while (detailsIterator.hasNext()) {
 								ShipmentDetailType detail = detailsIterator.next();
 								String detailNumber = detail.getDetailNumber();
-								preparedQuery2.setString(1, detailNumber);
-								preparedQuery3.setString(1, ex.getIn().getHeader("shipmentNumber").toString());
-								preparedQuery4.setString(1, detailNumber);
-								ResultSet resultado2 = preparedQuery2.executeQuery();
-								while (resultado2.next()) {
-									detail.setManufacturer(resultado2.getString(2));
-									detail.setCountryOfOrigin(resultado2.getString(1));
-								}
-								ResultSet resultado3 = preparedQuery3.executeQuery();
+//								preparedQuery2.setString(1, detailNumber);
+//								preparedQuery3.setString(1, ex.getIn().getHeader("shipmentNumber").toString());
+//								preparedQuery4.setString(1, detailNumber);
+//								ResultSet resultado2 = preparedQuery2.executeQuery();
+//								while (resultado2.next()) {
+//									detail.setManufacturer(resultado2.getString(2));
+//									detail.setCountryOfOrigin(resultado2.getString(1));
+//								}
+//								ResultSet resultado3 = preparedQuery3.executeQuery();
 								String specials = "";
-								while (resultado3.next()) {
-									specials = specials + resultado3.getString(1) + ",";
-								}
+//								while (resultado3.next()) {
+//									specials = specials + resultado3.getString(1) + ",";
+//								}
 								specials = specials.substring(0,specials.length()-1);
 								detail.setSpecial(specials);
-								ResultSet resultado4 = preparedQuery4.executeQuery();
-								while (resultado4.next()) {
-									detail.setCustomsEndUse(resultado4.getString(1));
-									detail.setCustomsState(resultado4.getString(2));
-								}
+//								ResultSet resultado4 = preparedQuery4.executeQuery();
+//								while (resultado4.next()) {
+//									detail.setCustomsEndUse(resultado4.getString(1));
+//									detail.setCustomsState(resultado4.getString(2));
+//								}
 								if (detail.getCommodityCode() == null) {
 									detail.setCommodityCode("");
 								}
