@@ -28,9 +28,19 @@
 	</properties>
 
 	<repositories>
+		<!-- <repository> -->
+		<!-- <id>artifactory-avianca</id> -->
+		<!-- <url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url> -->
+		<!-- </repository> -->
 		<repository>
-			<id>artifactory-avianca</id>
-			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
+			<id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id>
+			<url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
 		<repository>
 			<id>red-hat-ga-repository</id>
@@ -46,9 +56,19 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
+		<!-- <pluginRepository> -->
+		<!-- <id>artifactory-avianca</id> -->
+		<!-- <url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url> -->
+		<!-- </pluginRepository> -->
 		<pluginRepository>
-			<id>artifactory-avianca</id>
-			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
+			<id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id>
+			<url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</pluginRepository>
 		<pluginRepository>
 			<id>red-hat-ga-repository</id>
@@ -160,8 +180,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc4</artifactId>
-			<version>4.0</version>
+			<artifactId>sqljdbc41</artifactId>
+			<version>4.1</version>
 		</dependency>
 	</dependencies>
 	<build>
