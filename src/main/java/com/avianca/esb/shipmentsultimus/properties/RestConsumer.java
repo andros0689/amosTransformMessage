@@ -26,6 +26,7 @@ public class RestConsumer {
 	
 	private String context;
 	private String serviceName;
+	private String serviceNameAltern;
 	private String apiPath;
 	private String apiTitle;
 	private String apiVersion;
@@ -73,5 +74,11 @@ public class RestConsumer {
 	}
 	public void setServiceNameId(String serviceNameId) {
 		this.serviceNameId = serviceNameId;
+	}
+	public String getServiceNameAltern() {
+		return serviceNameAltern;
+	}
+	public void setServiceNameAltern(String serviceNameAltern) {
+		this.serviceNameAltern = serviceNameAltern;
 	}	
 }

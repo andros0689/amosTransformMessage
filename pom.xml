@@ -28,20 +28,20 @@
 	</properties>
 
 	<repositories>
-		<!-- <repository> -->
-		<!-- <id>artifactory-avianca</id> -->
-		<!-- <url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url> -->
-		<!-- </repository> -->
 		<repository>
-			<id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id>
-			<url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			<id>artifactory-avianca</id>
+			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
 		</repository>
+		<!-- <repository> -->
+		<!-- <id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id> -->
+		<!-- <url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </repository> -->
 		<repository>
 			<id>red-hat-ga-repository</id>
 			<url>https://maven.repository.redhat.com/ga</url>
@@ -56,20 +56,20 @@
 		</repository>
 	</repositories>
 	<pluginRepositories>
-		<!-- <pluginRepository> -->
-		<!-- <id>artifactory-avianca</id> -->
-		<!-- <url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url> -->
-		<!-- </pluginRepository> -->
 		<pluginRepository>
-			<id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id>
-			<url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
+			<id>artifactory-avianca</id>
+			<url>http://artifactory.avianca.com:8081/artifactory/ext-release-local</url>
 		</pluginRepository>
+		<!-- <pluginRepository> -->
+		<!-- <id>aviancavsts-visualstudio-com-aviancavsts-esb-redhatfuse</id> -->
+		<!-- <url>https://aviancavsts.pkgs.visualstudio.com/_packaging/ESB-RedHatFuse@Local/maven/v1</url> -->
+		<!-- <releases> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </releases> -->
+		<!-- <snapshots> -->
+		<!-- <enabled>true</enabled> -->
+		<!-- </snapshots> -->
+		<!-- </pluginRepository> -->
 		<pluginRepository>
 			<id>red-hat-ga-repository</id>
 			<url>https://maven.repository.redhat.com/ga</url>
@@ -173,11 +173,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.oracle</groupId> -->
-<!-- 			<artifactId>ojdbc7</artifactId> -->
-<!-- 			<version>12.1.0.2</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.oracle</groupId> -->
+		<!-- <artifactId>ojdbc7</artifactId> -->
+		<!-- <version>12.1.0.2</version> -->
+		<!-- </dependency> -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>sqljdbc41</artifactId>
