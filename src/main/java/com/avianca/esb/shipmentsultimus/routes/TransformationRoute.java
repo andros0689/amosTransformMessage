@@ -44,9 +44,9 @@ public class TransformationRoute extends ConfigurationRoute {
 	public void configure() throws Exception {
 		super.configure();
 		
-		JaxbDataFormat jaxb = new JaxbDataFormat("com.avianca.esb.shipmentsultimus.model");
-		jaxb.setPrettyPrint(true);
-		DataFormat dataformat = jaxb;
+		JaxbDataFormat dataformat = new JaxbDataFormat("com.avianca.esb.shipmentsultimus.model");
+		dataformat.setPrettyPrint(true);
+		DataFormat jaxb = dataformat;
 		
 		from("direct:transformationRoute").routeId("tasascambio_transformation")
 			.log("Inicio proceso tasas cambio.")
@@ -58,8 +58,7 @@ public class TransformationRoute extends ConfigurationRoute {
 			.choice()
 				.when()
 					.simple("${headers.fixCurrentLocationAdrress} == 'true'")
-					.to("sql:"+query1+"?outputHeader=currentLocationAdrress&dataSource=#dataSourceSqlServer")
-//					.to("sql:"+query1+"?outputHeader=currentLocationAdrress&dataSource=#dataSource")
+					.to("sql:"+query1+"?outputHeader=currentLocationAdrress&dataSource=#dataSource")
 					.bean("fixAndValidateXmlData","fixCurrentLocationAdrress")
 				.otherwise()
 					.log("No se ajusta CurrentLocationAdrress.")
